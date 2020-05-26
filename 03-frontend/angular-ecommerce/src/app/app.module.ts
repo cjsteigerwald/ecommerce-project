@@ -5,6 +5,19 @@ import { AppComponent } from './app.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { HttpClientModule } from '@angular/common/http'
 import { ProductService } from './services/product.service';
+import { Routes, RouterModule } from '@angular/router'
+
+// define routes most specific to generic. Order matters,
+// will fall through array i.e. think switch statement
+const routes: Routes = [
+  {path: 'category/:id', component: ProductListComponent},
+  {path: 'category', component: ProductListComponent},
+  {path: 'products', component: ProductListComponent},
+  // user gives empty url
+  {path: '', redirectTo: '/products', pathMatch: 'full'},
+  // user gives any url a route service is not setup for
+  {path: '**', redirectTo: '/products', pathMatch: 'full'}
+];
 
 @NgModule({
   declarations: [
@@ -12,6 +25,8 @@ import { ProductService } from './services/product.service';
     ProductListComponent
   ],
   imports: [
+    // from routes [] top of page
+    RouterModule.forRoot(routes),
     BrowserModule,
     HttpClientModule
   ],
