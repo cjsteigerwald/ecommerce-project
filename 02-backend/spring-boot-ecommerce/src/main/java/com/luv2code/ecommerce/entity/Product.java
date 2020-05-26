@@ -22,7 +22,7 @@ public class Product {
 
     // there are many products to a productCategory
     // this links to Product Category. Specifically joins on the
-    // category_id column as below in @JoinColumn (this is in db) 
+    // category_id column as below in @JoinColumn (this is in db)
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
     private ProductCategory category;
