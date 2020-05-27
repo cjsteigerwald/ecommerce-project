@@ -1,5 +1,14 @@
 Creating Master View to Details View
 
+2/27/20 @1451
+Finish details page added following to details
+  - product name
+  - product image
+  - product price
+  - product description
+  - purchase item button (not functioning)
+  - back to products link
+
 2/27/20 @ 1438
 Retrieve Prodcut Details and display to details page
   - currently product.name is displaying to details page
