@@ -1,3 +1,13 @@
+Creating Master View to Details View
+
+2/27/20 @1356
+Links from Master View to Details View Complete
+1. Create component components/ProductDetails
+  - add route to app.module.ts to ProductDetails
+  - add router links to product-list-grid.component.html
+    - add links to product image and product name
+
+
 
 Search for Products by Keyword
 1. Modify Spring Boot app - Add a new search method
