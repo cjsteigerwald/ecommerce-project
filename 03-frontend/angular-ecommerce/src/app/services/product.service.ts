@@ -9,6 +9,7 @@ import { ProductCategory } from '../common/product-category';
   providedIn: 'root'
 })
 export class ProductService {
+  
   // url of api service
   private baseUrl = 'http://localhost:8080/api/products';
 
@@ -52,9 +53,17 @@ export class ProductService {
     );
   }
 
-}
+  getProduct(theProductId: number): Observable<Product> {
+    
+    // build URL based on product id
+    const productUrl = `${this.baseUrl}/${theProductId}`;
 
-// end class ProductService
+    return this.httpClient.get<Product>(productUrl);
+  }
+
+}// end class ProductService
+
+
 // _embedded is the JSON response from the API
 // Unwraps the JSON from Spring Data REST _embedded entry
 // Product class should match expected JSON object

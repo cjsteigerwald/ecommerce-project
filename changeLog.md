@@ -1,5 +1,9 @@
 Creating Master View to Details View
 
+2/27/20 @ 1438
+Retrieve Prodcut Details and display to details page
+  - currently product.name is displaying to details page
+
 2/27/20 @1356
 Links from Master View to Details View Complete
 1. Create component components/ProductDetails
