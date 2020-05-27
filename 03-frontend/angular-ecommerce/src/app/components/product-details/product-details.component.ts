@@ -10,7 +10,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductDetailsComponent implements OnInit {
 
-  product: Product;
+  // fixes race conditions
+  product: Product = new Product();
   constructor(private productService: ProductService, 
                private route: ActivatedRoute) { }
 
