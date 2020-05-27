@@ -1,4 +1,19 @@
 
+Search for Products by Keyword
+1. Modify Spring Boot app - Add a new search method
+  - Update Java ProductRepository to include new method findByNameContaining() to 
+    expose API for product search. 
+2. Modify Angulare - for search
+  - create component components/search
+  - update routes in app.module.ts
+  - update app.component.html with search.component selector for searching
+  - update search.component.html with search function
+  - update search.component.ts to send data to search route, and search function
+  - refactor product.service.ts to search for product by keyword
+5. Enhance ProductListComponent to search for products with ProductService
+6. Update ProductService to call URL on Spring Boot app
+7. Enhance Client to handle "No Products Found"
+
 5/27/20 @ 0604
 create class common/product-category
 create component components/product-category-menu

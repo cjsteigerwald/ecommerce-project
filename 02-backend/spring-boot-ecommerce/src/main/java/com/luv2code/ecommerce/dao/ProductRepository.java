@@ -17,4 +17,9 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     // Spring will expose endpoint based on id passed in
     // SELECT * FROM product where category_id=?
     Page<Product> findByCategoryId(@RequestParam("id") Integer id, Pageable pageable);
+
+    // SELECT * FROM Product p
+    // WHERE
+    // p.name LIKE CONCAT('%', :name ,'%')
+    Page<Product> findByNameContaining(@RequestParam("name") String name, Pageable pageable);
 }
