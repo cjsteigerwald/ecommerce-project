@@ -116,4 +116,4 @@ Shopping Cart Items CRUD
   5. Modify CartDetailsComponent to retieve cart items
      - add method listCartDetails() to update cart
   6. Add HTML template for CartDetailsComponent
-
+  7. Modify cart-details.component.html to deal with an empty cart
