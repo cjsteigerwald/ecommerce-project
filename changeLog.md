@@ -1,6 +1,6 @@
 Add Products to Shopping Cart
 
-2/28/2020 @ 0523
+5/28/2020 @ 0523
 1. Cart Status Component: on main page, display total price and quantity
   - Create new compnonet: CartStatusComponent
   - Add HTML template for CartStatusComponent
@@ -12,14 +12,23 @@ Add Products to Shopping Cart
   - Add click handler for "Add to cart" button
   - Update ProductListComponent with click handler method addToCart()
 
+5/28/2020 @ 0747
 2. Cart Details Page: list the items in the cart
+  - Create model class: CartItem
+  - Develop CartService
+  - Modify ProductListComponent to call CartService
+  - Enhance CartStatusComponent to subscribe to CartService
+  - Modify CartStatusComponent HTML to display cart total price and quantity
+  - Modify CartService to include computeCartTotals() and logCartData()
+  - Modify ProductListComponent to call CartService
+
 3. Cart Details Page: add / remove items
 4. Checkout Button
 5. Checkout Form
 
 
-2/28/2020 @0459
-2/28/2020 @0212
+5/28/2020 @0459
+5/28/2020 @0212
 Pagination
 1. Add ng-bootstrap
 2. Update app.module.ts
@@ -46,7 +55,7 @@ Pagination
 
 Creating Master View to Details View
 
-2/27/20 @1451
+5/27/20 @1451
 Finish details page added following to details
   - product name
   - product image
@@ -55,11 +64,11 @@ Finish details page added following to details
   - purchase item button (not functioning)
   - back to products link
 
-2/27/20 @ 1438
+5/27/20 @ 1438
 Retrieve Prodcut Details and display to details page
   - currently product.name is displaying to details page
 
-2/27/20 @1356
+5/27/20 @1356
 Links from Master View to Details View Complete
 1. Create component components/ProductDetails
   - add route to app.module.ts to ProductDetails
