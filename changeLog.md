@@ -12,7 +12,7 @@ Add Products to Shopping Cart
   - Add click handler for "Add to cart" button
   - Update ProductListComponent with click handler method addToCart()
 
-5/28/2020 @ 0747
+5/28/2020 @0747
 2. Cart Details Page: list the items in the cart
   - Create model class: CartItem
   - Develop CartService
@@ -25,7 +25,12 @@ Add Products to Shopping Cart
   - Modify cart-status-component.html to dynmically display totalPrice and totalQuantity
   - Refactor methods  
 
+5/28/2020 @0823
 3. Cart Details Page: add / remove items
+  - Add click handler for "Add to cart" button
+  - Modify ProductDetailsComponent with click handler method
+  - Modify product-details.component.ts with addToCart()
+
 4. Checkout Button
 5. Checkout Form
 
