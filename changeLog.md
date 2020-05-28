@@ -1,3 +1,4 @@
+2/28/2020 @0459
 2/28/2020 @0212
 Pagination
 1. Add ng-bootstrap
@@ -18,6 +19,10 @@ Pagination
 6. Allow user to pick page size
   - Add drop-down list for page size to product-list-grid.html
   - update ProductListComponent with updatePageSize()
+7. Add pagination support to ProductService
+  -  add method searchProductPaginate() 
+8. Update ProductListComponent to handle pagination
+  - add method searchProductsPaginate()
 
 Creating Master View to Details View
 
