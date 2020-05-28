@@ -10,9 +10,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductListComponent implements OnInit {
 
-  products: Product[];
-  currentCategoryId: number;
-  searchMode: boolean;
+  products: Product[] = [];
+  currentCategoryId: number = 1;
+  previousCategorId: number = 1;
+  searchMode: boolean = false;
+
+  // properties for pagination
+  thePageNumber: number = 1;
+  thePageSize: number = 10;
+  theTotalElements: number = 0;
+  
 
   constructor(private productService: ProductService,
               private route: ActivatedRoute) { }
@@ -67,11 +74,39 @@ export class ProductListComponent implements OnInit {
       this.currentCategoryId = 1;
     }
 
-    // now get the products for the given category id
-    this.productService.getProductList(this.currentCategoryId).subscribe(
-      data => {
-        this.products = data;
-      }
-    )    
+    // Check is we have a different category the previous
+    // Note: Angular will reuse a component if it is currently 
+    // being viewed.
+
+    // if we have a different category id than previous
+    // then set thePageNumber back to 1
+    if (this.previousCategorId != this.currentCategoryId) {
+      this.thePageNumber = 1;
+    }
+
+    this.previousCategorId = this.currentCategoryId;
+    console.log(`currentCategoryId=${this.currentCategoryId}, thePageNumber=${this.thePageNumber}`);
+
+    // now get the products for the given category id, make call to remote API
+    // "- 1" due to Spring Java being "0" based
+    // and Angular being "1" based
+   this.productService.getProductListPaginate(this.thePageNumber - 1, this.thePageSize, 
+                                              this.currentCategoryId)
+                                              .subscribe(this.processResult());
   }
+
+  // map JSON response to properties for this class
+  // this.* is this class
+  // data.* is response JSON from remote API
+  processResult() {
+    return data => {
+      this.products = data._embedded.products;
+      // "+ 1" due to Spring Java being "0" based
+      // and Angular being "1" based
+      this.thePageNumber = data.page.number + 1;
+      this.thePageSize = data.page.size;
+      this.theTotalElements = data.page.totalElements;
+    };
+  }
+
 }

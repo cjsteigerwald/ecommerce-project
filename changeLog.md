@@ -1,3 +1,22 @@
+2/28/2020 @0212
+Pagination
+1. Add ng-bootstrap
+2. Update app.module.ts
+  - import ng-bootstrap
+  - add ng-bootstrap to @NgModule imports
+3. Update ProductService
+  - add page to GetResponseProducts interface
+  - add new method getProductListPaginate()
+4. Update ProductListComponent
+  - update class properties for pagination
+  - create method getProductListPaginate()
+  - create helper method processResults()
+5. Enhance HTML template to use ng-bootstrap pagination component
+  - product-list-grid.html
+    - add footer
+    - add ngb-pagination with properties, and event binding
+
+
 Creating Master View to Details View
 
 2/27/20 @1451
