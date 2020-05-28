@@ -24,14 +24,22 @@ export class CartService {
     let alreadyExistsInCart: boolean = false;
     let existingCartItem: CartItem = undefined;
 
+    
+
     if (this.cartItems.length > 0) {
+      // Array.find() method return the first element in an
+      // array that passes a given test, 
+      // return undefined if item not found in array
       // find the item in the cart based on item id
-      for (let tempCartItem of this.cartItems) {
+      existingCartItem = this.cartItems.find ( tempCartItem => tempCartItem.id === theCartItem.id);
+
+      /* refactored to use Array.find
+        for (let tempCartItem of this.cartItems) {
         if (tempCartItem.id == theCartItem.id) {
           existingCartItem = tempCartItem;
           break;
         }
-      }
+      } */
       // check if found
       alreadyExistsInCart = (existingCartItem != undefined);
     }

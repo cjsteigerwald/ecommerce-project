@@ -23,7 +23,7 @@ Add Products to Shopping Cart
   - Modify ProductListComponent to call CartService
   - Modify cart-status-component.ts to subscribe to CartService
   - Modify cart-status-component.html to dynmically display totalPrice and totalQuantity
-  
+  - Refactor methods  
 
 3. Cart Details Page: add / remove items
 4. Checkout Button
