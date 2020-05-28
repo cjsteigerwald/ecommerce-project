@@ -117,3 +117,11 @@ Shopping Cart Items CRUD
      - add method listCartDetails() to update cart
   6. Add HTML template for CartDetailsComponent
   7. Modify cart-details.component.html to deal with an empty cart
+
+2. Increment Item Quantity
+  1. Modify CartDetailsComponent HTML template
+     - Add the "increment" button
+     - Add click handler for the "increment" button on HTML template
+     - Add the "decrement" button
+     - add click handler for the "decrement button on HTML template
+  2. Update CartDetailsComponent with click handler method
