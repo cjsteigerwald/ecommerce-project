@@ -21,6 +21,9 @@ Add Products to Shopping Cart
   - Modify CartStatusComponent HTML to display cart total price and quantity
   - Modify CartService to include computeCartTotals() and logCartData()
   - Modify ProductListComponent to call CartService
+  - Modify cart-status-component.ts to subscribe to CartService
+  - Modify cart-status-component.html to dynmically display totalPrice and totalQuantity
+  
 
 3. Cart Details Page: add / remove items
 4. Checkout Button
