@@ -59,7 +59,7 @@ export class ProductListComponent implements OnInit {
     this.previousKeyword = theKeyword;
 
     console.log(`keyword=${theKeyword}, thePageNumber=${this.thePageNumber}`);
-    
+
     // now search for the products using keyword
     this.productService.searchProductsPaginate(this.thePageNumber - 1, 
                                                this.thePageSize,
@@ -125,5 +125,11 @@ export class ProductListComponent implements OnInit {
     this.thePageNumber = 1;
     // to refresh view
     this.listProducts();
+  }
+
+  addToCart(theProduct: Product) {
+    console.log(`Adding to cart: ${theProduct.name}, ${theProduct.unitPrice}`);
+
+    // TODO ... do the work
   }
 }

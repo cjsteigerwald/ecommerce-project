@@ -1,3 +1,23 @@
+Add Products to Shopping Cart
+
+2/28/2020 @ 0523
+1. Cart Status Component: on main page, display total price and quantity
+  - Create new compnonet: CartStatusComponent
+  - Add HTML template for CartStatusComponent
+    - Add <app-cart-status /> to app.component.html
+    - Update cart-status.component.html with shopping cart info
+    - Update product-list-grid.component.html
+      - Add click event handler to "Add to cart" button
+   - Add method for "Add to cart" button 
+  - Add click handler for "Add to cart" button
+  - Update ProductListComponent with click handler method addToCart()
+
+2. Cart Details Page: list the items in the cart
+3. Cart Details Page: add / remove items
+4. Checkout Button
+5. Checkout Form
+
+
 2/28/2020 @0459
 2/28/2020 @0212
 Pagination
