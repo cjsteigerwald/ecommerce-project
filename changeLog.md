@@ -1,5 +1,4 @@
 Add Products to Shopping Cart
-
 5/28/2020 @ 0523
 1. Cart Status Component: on main page, display total price and quantity
   - Create new compnonet: CartStatusComponent
@@ -105,3 +104,16 @@ create class common/product-category
 create component components/product-category-menu
 Update category menu to be created dynamically from
 API. 
+
+Shopping Cart Items CRUD
+1. List Shopping Cart Items
+  1. Create new component: CartDetialsComponent
+  2. Add new route for CartDetailsComponent
+    - add route details to app.module.ts (router)
+  3. Update link for Shopping Cart icon
+     - update Cart Details in cart-status-component.html
+  4. Stub out HTML tables in cart-details.component.html
+  5. Modify CartDetailsComponent to retieve cart items
+     - add method listCartDetails() to update cart
+  6. Add HTML template for CartDetailsComponent
+
