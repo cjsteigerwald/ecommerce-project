@@ -15,7 +15,9 @@ Pagination
   - product-list-grid.html
     - add footer
     - add ngb-pagination with properties, and event binding
-
+6. Allow user to pick page size
+  - Add drop-down list for page size to product-list-grid.html
+  - update ProductListComponent with updatePageSize()
 
 Creating Master View to Details View
 
